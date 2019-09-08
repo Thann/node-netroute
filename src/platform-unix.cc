@@ -15,7 +15,7 @@ namespace netroute {
 using namespace node;
 using namespace v8;
 
-bool GetInfo(int family, Handle<Array> result) {
+bool GetInfo(int family, Local<Array> result) {
   int mib[6] = { CTL_NET, PF_ROUTE, 0, family, NET_RT_DUMP, 0 };
   size_t size;
   char* addresses;

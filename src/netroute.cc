@@ -33,7 +33,7 @@ static NAN_METHOD(GetInfo) {
 }
 
 
-static void Init(Handle<Object> target) {
+static void Init(Local<Object> target) {
   Nan::HandleScope scope;
 
   Nan::SetMethod(target, "getInfo", GetInfo);
